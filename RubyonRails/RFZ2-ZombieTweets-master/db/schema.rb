@@ -9,39 +9,39 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121107162802) do
+ActiveRecord::Schema.define(version: 20121107162802) do
 
-  create_table "categories", :force => true do |t|
+  create_table "categories", force: true do |t|
     t.string "name"
   end
 
-  create_table "categorizations", :force => true do |t|
+  create_table "categorizations", force: true do |t|
     t.integer "tweet_id"
     t.integer "category_id"
   end
 
-  create_table "locations", :force => true do |t|
+  create_table "locations", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "tweet_id"
   end
 
-  create_table "tweets", :force => true do |t|
+  create_table "tweets", force: true do |t|
     t.string   "message"
     t.integer  "zombie_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "private"
-    t.boolean  "show_location", :default => false
+    t.boolean  "show_location", default: false
     t.integer  "location_id"
   end
 
-  add_index "tweets", ["location_id"], :name => "index_tweets_on_location_id"
+  add_index "tweets", ["location_id"], name: "index_tweets_on_location_id"
 
-  create_table "weapons", :force => true do |t|
+  create_table "weapons", force: true do |t|
     t.string   "name"
     t.integer  "ammo"
     t.boolean  "is_broken"
@@ -50,12 +50,12 @@ ActiveRecord::Schema.define(:version => 20121107162802) do
     t.datetime "updated_at"
   end
 
-  create_table "weapons_zombies", :id => false, :force => true do |t|
+  create_table "weapons_zombies", id: false, force: true do |t|
     t.integer "weapon_id"
     t.integer "zombie_id"
   end
 
-  create_table "zombies", :force => true do |t|
+  create_table "zombies", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
