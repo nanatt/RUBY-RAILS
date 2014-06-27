@@ -12,4 +12,7 @@ This blog only CRUD articles.
 * Initialization: $ rails server
 
 -> $ rails new blog
-	Isn't it obvious? 
+
+
+
+----- 	Isn't it obvious?  -----
