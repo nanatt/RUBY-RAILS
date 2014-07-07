@@ -5,7 +5,20 @@ class Article < ActiveRecord::Base
 	has_and_belongs_to_many :categories
 	has_many :comments
 
+	scope :published, lambda { where("articles.published_at IS NOT NULL") }
+  	scope :draft, lambda { where("articles.published_at IS NULL") }
+  	#Article.recent
+  	scope :recent, lambda { published.where("articles.published_at > ?", 1.week.ago.to_date) }
+  	#Article.where_title("Active")
+  	scope :where_title, lambda { |term| where("articles.title LIKE ?", "%#{term}%") }
+
 	def long_title
 		"#{title} - #{published_at}"
+	end
+
+
+	#to make sure no one creates a comment for an article that hasn’t been published yet.	
+	def published?
+		published_at.present?
 	end
 end
