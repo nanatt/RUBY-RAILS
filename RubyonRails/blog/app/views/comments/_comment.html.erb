@@ -1,9 +1,12 @@
 <%= div_for comment do %>
 	<h3>
+		<!--why do i need to use it??-->
 		<%= comment.name %> &lt;<%= comment.email %>&gt; said:
-		<span class="actions">
-			<%= link_to "Delete", article_comment_path(:article_id => @article, :id => comment), confirm: "Are you sure?", method: :delete %>
-		</span>
+		<% if @article.owned_by? current_user %>
+			<span class="actions">
+				<%= link_to "Delete", article_comment_path(:article_id => @article, :id => comment), confirm: "Are you sure?", method: :delete %>
+			</span>
+		<% end %>
 	</h3>
 	<%= comment.body %>
 <% end %>
