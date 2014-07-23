@@ -52,7 +52,7 @@ a:hover {
   padding: 15px 0;
   height: 35px;
 }
-#main #user_bar {
+#header #user_bar {
   font-size: 10px;
   float: right;
 }
