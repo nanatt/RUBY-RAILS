@@ -20,8 +20,12 @@ class CommentsController < ApplicationController
 	def destroy
 		@article = current_user.articles.find(params[:article_id])
 		@comment = @article.comments.find(params[:id])
-		@comment.destroy
-		redirect_to @article, alert: "Are you sure?", notice: 'Comment Deleted'
+		if @comment.destroy
+			respond_to do |format|
+				format.html {redirect_to @article, notice: 'Comment Deleted'}
+				format.js
+			end
+		end
 	end
 
 	private
@@ -30,7 +34,6 @@ class CommentsController < ApplicationController
 	end
 
 	def comment_params
-		params.require(:comments).permit(:name, :email, :body)
-		
+		params.require(:comment).permit(:name, :email, :body)
 	end
 end
