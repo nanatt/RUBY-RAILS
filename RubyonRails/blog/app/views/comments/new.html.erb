@@ -12,6 +12,7 @@
 		<%= f.text_area :body %>
 	</div>
 	<div class="actions">
-		<%= f.submit "Send" %>
+		<%= f.submit "Send" %> or
+		<%= link_to 'Cancel', 'javascript:void(0)', :onclick => "$('#new_comment').slideUp(); $('#new_comment_link').show()" %>
 	</div>
 <% end %>
