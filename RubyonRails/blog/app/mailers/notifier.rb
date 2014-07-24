@@ -6,9 +6,9 @@ class Notifier < ActionMailer::Base
   #
   #   en.notifier.email_friend.subject
   #
-  def email_friend
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def email_friend(article, sender_name, receiver_email)
+    @article = article
+    @sender_name = sender_name
+    mail to: receiver_email, subject: "Interesting Article"
   end
 end
