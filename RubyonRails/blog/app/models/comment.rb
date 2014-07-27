@@ -19,4 +19,8 @@ class Comment < ActiveRecord::Base
   	def email_article_author
     	puts "We will notify #{article.user.email} in Chapter 9"
 	end
+
+	def send_comment_author
+		Notifier.Comment_added(self).deliever
+	end
 end
