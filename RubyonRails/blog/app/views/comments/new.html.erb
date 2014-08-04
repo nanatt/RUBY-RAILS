@@ -1,11 +1,11 @@
-<%= form_for([@article, @article.comments.new], remote: true) do |f| %>
+<%= form_for([@article, current_user.replies.new], remote: true) do |f| %>
 	<div class="field">
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 	</div>
 	<div class="field">
 		<%= f.label :email%>
-		<%= f.text_field :email %>
+		<%= f.text_field :email, value: current_user.email %>
 	</div>
 	<div class="field">
 		<%= f.label :body %>
