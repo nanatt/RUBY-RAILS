@@ -23,4 +23,9 @@ class Comment < ActiveRecord::Base
 	def send_comment_author
 		Notifier.Comment_added(self).deliever
 	end
+	
+	def owned_by?(owner)
+		return false unless owner.is_a?(User)
+		user == owner
+	end
 end
