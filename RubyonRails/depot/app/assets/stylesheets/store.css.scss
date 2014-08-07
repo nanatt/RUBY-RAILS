@@ -37,7 +37,11 @@
 		.price{
 			color: #44a;
 			font-weight: bold;
-			margin-right: 3em;
+			margin-right: 0.5em;
+		}
+		form, div {
+			display: inline;
+			margin-left: 0.3em;
 		}
 	}
 }
