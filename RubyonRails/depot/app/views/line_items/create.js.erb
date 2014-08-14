@@ -1,4 +1,4 @@
-if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+if ($('#cart tr').length == 1) { $('#cart').slideDown('blind'); }
 
 $("#cart").html("<%= escape_javascript render(@cart) %>");
 //It tells the browser to replace the content of the element whose id="cart with that html"
