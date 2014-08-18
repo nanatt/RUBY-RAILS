@@ -1,28 +1,19 @@
-== README
+== DEPOT APPLICATION ==
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WARNING: In construction!
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.0.0
 
-* System dependencies
+* Rails version: 4.1.0
 
-* Configuration
+* Database: sqlite3
 
-* Database creation
+* Bundle install, rake db:migrate and rails s 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+What are ya waiting? Join us! 
+---> http://rubyonrails.org/
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ps: This is a Depot based on a Book.
