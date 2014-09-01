@@ -21,3 +21,19 @@
 
 en:
   hello: "Hello world"
+  layouts:
+  title: "Pragmatic Bookshelf" 
+  home: "Home"
+  questions: "Questions"
+  news: "News"
+  contact: "Contact"
+  login: "Log in"
+
+  title_html: "Your Pragmatic Catalog"
+  add_html: "Add to Cart"
+
+  carts: 
+    cart:
+      title: "Your Cart" 
+      empty: "Empty cart" 
+      checkout: "Checkout"
