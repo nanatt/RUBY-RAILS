@@ -6,12 +6,15 @@ es:
    news: "Noticias"
    contact: "Contacto"
    login: "Iniciar Sesión"
+   signIn: "Registrarse"
 
-   title_html: "Su Catálogo Pragmática"
-   add_html: "Añadir a la cesta"
+   store:
+      index:
+         title_html: "Su Catálogo Pragmática"
+         add_html: "Añadir al Carrito"
 
    carts: 
-    cart:
-      title: "Carrito de la Compra" 
-      empty: "Vaciar Carrito" 
-      checkout: "Comprar"
+      cart:
+         title: "Carrito de la Compra" 
+         empty: "Vaciar Carrito" 
+         checkout: "Comprar"

@@ -28,9 +28,13 @@ en:
   news: "News"
   contact: "Contact"
   login: "Log in"
+  signIn: "Sign In"
 
-  title_html: "Your Pragmatic Catalog"
-  add_html: "Add to Cart"
+
+  store:
+    index:
+      title_html: "Your Pragmatic Catalog"
+      add_html: "Add to Cart"
 
   carts: 
     cart:

@@ -8,13 +8,16 @@
 </head>
 <body class="<%= controller.controller_name %>">
 	<div id="banner">
+		<%= form_tag store_path, class: 'locale' do %>
+			<%= select_tag 'set_locale',
+				options_for_select(LANGUAGES, I18n.locale.to_s),
+				onchange: 'this.form.submit()' %>
+			<%= javascript_tag "$(.locale input').hide()" %>
+		<% end %>
+
 		<%=image_tag("logo.png") %>
 		<%= @page_title || t('title') %>
-		<% unless session[:user_id] %>
-			<ul>
-				<li><%= link_to t("login"), login_path %></li>
-			</ul>
-		<% end %>
+
 	</div>
 	<div id ="columns">
 		<div id="side">
@@ -33,9 +36,10 @@
 				</ul>
 				<%= link_to "Logout", logout_path, method: :delete %>
 			<% else %>
-				<!---<ul>
-					<li><%= link_to "Sign In" %><li> 
-				</ul>-->
+				<ul>
+					<li><%= link_to t("signIn") %><li> 
+					<li><%= link_to t("login"), login_path %></li>
+				</ul>
 			<%end%>
 			<ul>
 				<li><%= link_to t("home"), store_path %></a></li>
