@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= :title %></title>
+    <title> Sample App </title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -17,9 +17,9 @@
           <%= link_to "sample app", '#', id: "logo" %>
           <nav>
             <ul class="nav pull-right">
-              <li class="pull-left"><%= link_to "Home",    '#' %></li>
-              <li class="pull-left"><%= link_to "Help",    '#' %></li>
-              <li class="pull-left"><%= link_to "Sign in", '#' %></li>
+              <li class="pull-left"><%= link_to "Home", root_path %></li>
+              <li class="pull-left"><%= link_to "Help", help_path %></li>
+              <li class="pull-left"><%= link_to "Sign in", "#" %></li>
             </ul>
           </nav>
         </div>
@@ -27,6 +27,7 @@
     </header>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>

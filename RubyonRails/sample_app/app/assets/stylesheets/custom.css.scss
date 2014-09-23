@@ -20,11 +20,38 @@ textarea {
 
 .center {
   text-align: center;
-}
-
-.center h1 {
+  h1 {
   margin-bottom: 10px;
+  }
 }
-.conteudo{
-	background-color: #ddd;
+ #logo {
+ 	float: left;
+ 	margin-right: 10px;
+ 	font-size: 1.7em;
+ 	color: #fff;
+ 	text-transform: uppercase;
+ 	letter-spacing: -1px;
+ 	font-weight: bold;
+ 	line-height: 1;
+ 	padding-top: 10px;
+	&:hover{
+ 		color: #fff;
+ 		text-decoration: none;
+ 	}
+}
+footer{
+	border-top: 1px solid black;
+	a{
+		color: #555;
+		&:hover{
+		color: #840BE0;
+		}
+	}
+	small a{
+		float: left;
+		&:hover{
+		text-decoration: none;
+		background-color: #E0E0E0;
+		}
+	}
 }
