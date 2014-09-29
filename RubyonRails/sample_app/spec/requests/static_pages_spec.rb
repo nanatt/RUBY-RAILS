@@ -1,11 +1,12 @@
 require 'spec_helper'
+require 'capybara'
 
 describe "Static pages" do
 
   subject { page }
 
   describe "Home page" do
-    before { visit root_path }
+    before { visit home_path }
 
     it { should have_content('Sample App') }
     it { should have_title(full_title('')) }
