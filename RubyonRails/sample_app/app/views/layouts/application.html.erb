@@ -14,7 +14,7 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to "sample app", '#', id: "logo" %>
+          <%= link_to "sample app", home_path, id: "logo" %>
           <nav>
             <ul class="nav pull-right">
               <li class="pull-left"><%= link_to "Home", home_path %></li>
@@ -28,6 +28,7 @@
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
