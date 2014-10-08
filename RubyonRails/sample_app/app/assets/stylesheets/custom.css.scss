@@ -69,6 +69,12 @@ footer{
 	float: left;
 	width: 100%;
 	margin-top: 45px;
-	@incluce box_sizing;
+	@include box_sizing;
 }
-
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+	height: auto;
+	@include box_sizing;
+}
