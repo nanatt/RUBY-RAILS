@@ -49,6 +49,7 @@ gem 'factory_girl_rails'
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
+	gem 'unicorn'
 end
 
 gem 'bootstrap-sass'
